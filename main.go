@@ -3,16 +3,15 @@ package main
 import "fmt"
 
 func main() {
-	a := 2
-	b := &a
-	a = 10
+	// names := [5]string{"choi", "lyn", "jung"}
+	// names[3] = "1"
+	// names[4] = "1"
+	// names[5] = "1"
 
-	fmt.Println(&a, b)
-	fmt.Println(*b)
-	fmt.Println(a)
-	//b= 1
-	*b = 20
-	fmt.Println(&a, b)
-	fmt.Println(*b)
-	fmt.Println(a)
+	//slice
+	names := []string{"choi", "lyn", "jung"}
+
+	names = append(names, "e")
+
+	fmt.Println(names)
 }
