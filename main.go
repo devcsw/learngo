@@ -2,13 +2,22 @@ package main
 
 import "fmt"
 
+type person struct {
+	name    string
+	age     int
+	favFood []string
+}
+
 func main() {
-	// key: value
-	choi := map[string]string{"name": "choi", "age": "12"}
+	// struct 오브젝트 같은데 map보단 유연함
+	//구조체?
+	favFood := []string{"cola", "pizza"}
+	choi := person{"choi", 32, favFood}
 	fmt.Println(choi)
-	for key, value := range choi {
-		fmt.Println(key, value)
-		fmt.Println(key)
-		fmt.Println(value)
+	choi = person{
+		name:    "choi",
+		age:     31,
+		favFood: favFood,
 	}
+	fmt.Println(choi)
 }
